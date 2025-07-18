@@ -15,7 +15,7 @@
 > To access these internal systems, we must first gain a foothold on `DMZ01`. From there, we can `pivot` — that is, route our traffic through the compromised host into the private network. This enables our tools to communicate with internal hosts as if they were directly accessible. After compromising the DMZ, refer to the module `cheatsheet` for the necessary commands to set up the pivot and continue your assessment.
 
 Questions:
-1. What is the NTLM hash of NEXURA\Administrator? `36e09***************************`
+1. What is the NTLM hash of `NEXURA\Administrator`? `36e09***************************`
 
 ### External Information Gathering
 
@@ -335,6 +335,10 @@ PS C:\Users\hwilliam> C://Users//hwilliam//Desktop//Snaffler.exe --domainusers -
 
 micha*********   (Employee-Passwords_OLD)
 ```
+
+![Windows - Password Safe 01](./assets/screenshots/password_attacks_skills_assessment_01.png)
+
+![Windows - Password Safe 02](./assets/screenshots/password_attacks_skills_assessment_02.png)
 
 ```
 *Evil-WinRM* PS C:\Users\hwilliam\Documents> type C://Users//hwilliam//Desktop//Employee-Passwords_OLD.txt
