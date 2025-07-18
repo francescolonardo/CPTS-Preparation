@@ -12,6 +12,8 @@
 Questions:
 1. Enumerate the server carefully and find the `flag.txt` file. Submit the contents of this file as the answer. `HTB{7*******************************************************`
 
+#### External Information Gathering
+
 ```
 ┌──(nabla㉿kali)-[~]
 └─$ sudo nmap -sS -p- 10.129.42.195 -T5
@@ -24,6 +26,8 @@ PORT     STATE SERVICE
 53/tcp   open  domain
 2121/tcp open  ccproxy-ftp
 ```
+
+#### FTP Footprinting 
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -85,6 +89,8 @@ ceil@NIXEASY:~$ cat /home/flag/flag.txt
 HTB{7******************************************************* 📌
 ```
 
+---
+
 ### Footprinting Lab - Medium
 
 > This second server is a server that everyone on the internal network has access to. In our discussion with our client, we pointed out that these servers are often one of the main targets for attackers and that this server should be added to the scope.
@@ -92,6 +98,8 @@ HTB{7******************************************************* 📌
 
 Questions:
 1. Enumerate the server carefully and find the username `HTB` and its password. Then, submit this user's password as the answer. `lnch7*******************`
+
+#### External Information Gathering
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -110,6 +118,8 @@ PORT      STATE SERVICE
 
 [SNIP]
 ```
+
+#### NFS Footprinting
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -181,6 +191,8 @@ credentials:
     port: 445 (SMB)
 ```
 
+#### SMB Footprinting
+
 ```
 ┌──(nabla㉿kali)-[~]
 └─$ netexec smb 10.129.97.158 -u alex -p 'lol123!mD' --shares
@@ -236,6 +248,8 @@ credentials:
 └─$ xfreerdp /v:10.129.97.158 /u:administrator /p:'87N1ns@slls83' /dynamic-resolution /drive:shared,~/shared +clipboard
 ```
 
+#### MSSQL Footprinting
+
 ![MSSQL Server Management Studio](./assets/screenshots/footprinting_skills_assessment_01.png)
 
 ```sql
@@ -252,12 +266,16 @@ lnch7******************* 📌
 
 ![MSSQL Interaction Queries](./assets/screenshots/footprinting_skills_assessment_02.png)
 
+---
+
 ### Footprinting Lab - Hard
 
 > The third server is an MX and management server for the internal network. Subsequently, this server has the function of a backup server for the internal accounts in the domain. Accordingly, a user named `HTB` was also created here, whose credentials we need to access.
 
 Questions:
 1. Enumerate the server carefully and find the username `HTB` and its password. Then, submit HTB's password as the answer. `cr3n4***********************`
+
+#### External Information Gathering
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -306,6 +324,8 @@ PORT    STATE SERVICE
 161/udp open  snmp
 ```
 
+#### SNMP Footprinting
+
 ```
 ┌──(nabla㉿kali)-[~]
 └─$ onesixtyone -c /opt/useful/seclists/Discovery/SNMP/snmp.txt 10.129.202.20
@@ -330,6 +350,8 @@ iso.3.6.1.2.1.25.1.7.1.2.1.3.6.66.65.67.75.85.80 = STRING: "tom NMds732Js2761"
 
 [SNIP]
 ```
+
+#### IMAP Footprinting
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -433,6 +455,8 @@ credentials:
     port: 3306 (MySQL)
 ```
 
+#### Internal Information Gathering
+
 ```
 tom@NIXHARD:~$ ls -la
 
@@ -457,7 +481,11 @@ tom@NIXHARD:~$ cat .bash_history
 mysql -u tom -p 
 
 [SNIP]
+```
 
+#### MySQL Footprinting
+
+```
 tom@NIXHARD:~$ mysql -u tom -p 
 
 Enter password: 
