@@ -6,6 +6,8 @@
 > The client has provided us with a low privileged user to assess the security of the server. Connect via SSH and begin looking for misconfigurations and other flaws that may escalate privileges using the skills learned throughout this module.
 > Once on the host, we must find `five` flags on the host, accessible at various privilege levels. Escalate privileges all the way from the `htb-student` user to the `root` user and submit all five flags to finish this module.
 
+>  SSH to `10.129.235.16` (`ACADEMY-LLPE-SKILLS-NIX03`) with user `htb-student` and password "Academy_LLPE!".
+
 Questions:
 1. Submit the contents of `flag1.txt`. `LLPE{***************************`
 2. Submit the contents of `flag2.txt`. `LLPE{***********************`
@@ -36,7 +38,7 @@ http://10.129.235.16:8080/ [200 OK] Apache-Tomcat, Country[RESERVED][ZZ], IP[10.
 http://10.129.235.16:80/ [200 OK] Apache[2.4.41], Bootstrap, Country[RESERVED][ZZ], Email[info@inlanefreight.loca,info@inlanefreight.local], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.129.235.16], Script, Title[Inlane Freight]
 ```
 
-#### ???
+#### Foothold - SSH
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -50,7 +52,7 @@ Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
 htb-student@nix03:~$
 ```
 
-#### ???
+#### Information Gathering - Environment Enumeration
 
 ```
 htb-student@nix03:~$ ls -la
@@ -108,7 +110,7 @@ htb-student@nix03:~$ cat .config/.flag1.txt
 LLPE{*************************** 📌
 ```
 
-#### ???
+#### Information Gathering - Environment Enumeration
 
 ```
 htb-student@nix03:~$ ls -la /home/
@@ -153,7 +155,7 @@ credentials:
     port: 22 (SSH)
 ```
 
-#### ???
+#### Lateral Movement
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -172,7 +174,7 @@ barry@nix03:~$ cat flag2.txt
 LLPE{*********************** 📌
 ```
 
-#### ???
+#### Linux Privilege Escalation Abusing Privileged Groups
 
 ```
 barry@nix03:~$ id
@@ -192,7 +194,7 @@ barry@nix03:~$ cat /var/log/flag3.txt
 LLPE{***************** 📌
 ```
 
-#### ???
+#### Information Gathering - Web Applications
 
 ```
 barry@nix03:~$ find / -type f -name "flag4.txt" -ls 2>/dev/null
@@ -231,7 +233,7 @@ with role "manager-gui". The host-manager webapp is restricted to users with
 role "admin-gui". Users are defined in /etc/tomcat9/tomcat-users.xml.
 ```
 
-#### ???
+#### Information Gathering - Environment Enumeration
 
 ```
 barry@nix03:~$ ls -la /etc/tomcat9
@@ -261,7 +263,7 @@ credentials:
     port: 80 (HTTP)
 ```
 
-#### ???
+#### Attacking Tomcat Application
 
 ![Firefox - Tomcat Manager Login](./assets/screenshots/linux_privilege_escalation_skills_assessment_02.png)
 
@@ -288,7 +290,7 @@ tomcat@nix03:/var/lib/tomcat9$ cat /var/lib/tomcat9/flag4.txt
 LLPE{******************* 📌
 ```
 
-#### ???
+#### Linux Privilege Escalation Abusing Special Permissions
 
 ```
 tomcat@nix03:/var/lib/tomcat9$ sudo -l
