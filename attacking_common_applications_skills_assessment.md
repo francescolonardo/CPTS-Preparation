@@ -15,7 +15,7 @@ Questions:
 3. What version of the application is in use? `9.0.0.M1`
 4. Exploit the application to obtain a shell and submit the contents of the `flag.txt` file on the Administrator desktop. `f5576***************************`
 
-#### External Information Gathering
+#### Web Application Discovery and Enumeration
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -62,6 +62,8 @@ PORT     STATE SERVICE VERSION
 |_http-favicon: Apache Tomcat
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 ```
+
+#### Attacking Tomcat CGI
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -140,7 +142,7 @@ Questions:
 5. What is the admin password to access this application? `oilaKglm7M09@CPL&^lC`
 6. Obtain reverse shell access on the target and submit the contents of the `flag.txt` file. `afe37***************************`
 
-#### External Information Gathering
+#### Web Application Discovery and Enumeration
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -225,6 +227,8 @@ PORT     STATE SERVICE    VERSION
 9094/tcp open  unknown
 ```
 
+#### Gitlab - Discovery and Enumeration
+
 ```
 ┌──(nabla㉿kali)-[~]
 └─$ firefox http://10.129.201.90:8180/ &
@@ -270,6 +274,8 @@ Your session has timed out.
 postgres=# CREATE USER nagiosadmin WITH PASSWORD 'oilaKglm7M09@CPL&^lC';
 ```
 
+#### Attacking Nagios
+
 ```
 ┌──(nabla㉿kali)-[~]
 └─$ firefox http://monitoring.inlanefreight.local &
@@ -295,6 +301,10 @@ listening on [any] 1337 ...
 ![Firefox - Nagios Reverse Shell 4](./assets/screenshots/attacking_common_applications_skills_assessment_11.png)
 
 ![Firefox - Nagios Reverse Shell 5](./assets/screenshots/attacking_common_applications_skills_assessment_12.png)
+
+![Firefox - Nagios Reverse Shell 6](./assets/screenshots/attacking_common_applications_skills_assessment_13.png)
+
+![Firefox - Nagios Reverse Shell 7](./assets/screenshots/attacking_common_applications_skills_assessment_14.png)
 
 ```
 [CONTINUE]
@@ -419,6 +429,8 @@ RDP to with user `Administrator` and password "xcyj8izxNVzhf4z".
 Questions:
 1. What is the hardcoded password for the database connection in the `MultimasterAPI.dll` file? `D3veL*******`
 
+#### Attacking Applications Connecting to Services
+
 ```
 ┌──(nabla㉿kali)-[~]
 └─$ xfreerdp /v:10.129.95.200 /u:Administrator /p:'xcyj8izxNVzhf4z' /dynamic-resolution /drive:shared,~/shared +clipboard /cert-ignore
@@ -438,7 +450,7 @@ Mode                LastWriteTime         Length Name
 PS C:\Users\Administrator> C:\Tools\dnSpy\dnSpy.exe C:\inetpub\wwwroot\bin\MultimasterAPI.dll
 ```
 
-![dnSpy - MultimasterAPI.dll](./assets/screenshots/attacking_common_applications_skills_assessment_01.png)
+![dnSpy - MultimasterAPI.dll](./assets/screenshots/attacking_common_applications_skills_assessment_15.png)
 
 ---
 ---
