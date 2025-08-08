@@ -1,5 +1,16 @@
 # [Attacking Enterprise Networks](https://academy.hackthebox.com/module/details/163)
 
+## Table of Contents
+
+- [x] External Testing
+	- [x] External Information Gathering
+	- [x] Service Enumeration and Exploitation
+	- [x] Web Enumeration and Exploitation
+	- [x] Initial Access
+
+---
+---
+
 ## External Testing
 
 > Our client, Inlanefreight, has contracted our company, Acme Security, Ltd., to perform a full-scope External Penetration Test to assess their perimeter security. The customer has asked us to identify as many vulnerabilities as possible; therefore, evasive testing is not required. They would like to see what sort of access can be achieved by an anonymous user on the Internet. Per the Rules of Engagement (RoE), if we can breach the DMZ and gain a foothold into the internal network, they would like us to see how far we can take that access, up to and including Active Directory domain compromise. The client has not provided web application, VPN, or Active Directory user credentials. The following domain and network ranges are in scope for testing:
@@ -10,19 +21,11 @@
 |*.inlanefreight.local (all subdomains)|172.16.9.0/23|
 ||INLANEFREIGHT.LOCAL (Active Directory domain)|
 
-> The customer has provided the primary domain and internal networks but has not given specifics on the exact subdomains within this scope nor the "live" hosts we will encounter within the network. They would like us to perform discovery to see what type of visibility an attacker can gain against their external network (and internal if a foothold is achieved).
-
-### Table of Contents
-
-- [x] External Testing 
-	- [x] External Information Gathering
-	- [x] Service Enumeration and Exploitation
-	- [x] Web Enumeration and Exploitation
-	- [x] Initial Access
-
 ---
 
 ### External Information Gathering
+
+> The customer has provided the primary domain and internal networks but has not given specifics on the exact subdomains within this scope nor the "live" hosts we will encounter within the network. They would like us to perform discovery to see what type of visibility an attacker can gain against their external network (and internal if a foothold is achieved).
 
 vHosts needed for these questions:
 - `inlanefreight.local`
@@ -186,6 +189,15 @@ dev.inlanefreight.local
 ---
 
 ### Service Enumeration and Exploitation
+
+> Our Nmap scans uncovered a few interesting services:
+- Port 21: FTP
+- Port 22: SSH
+- Port 25: SMTP
+- Port 53: DNS
+- Port 80: HTTP
+- Ports 110/143/993/995: imap and pop3
+- Port 111: rpcbind
 
 Questions:
 1. Enumerate the accessible services and find a flag. Submit the flag value as your answer (flag format: `HTB{ }`). `HTB{0eb0a***************************}`
@@ -392,6 +404,8 @@ HTB{0eb0a***************************} 📌
 ---
 
 ### Web Enumeration and Exploitation
+
+> The quickest and most efficient way to get through a bunch of web applications is using a tool such as [EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness) to take screenshots of each web application. This is particularly helpful if we have a massive scope for our assessment and browsing each web application one at a time is not feasible. In our case, we have `11` subdomains/vhosts (for now), so it's worth firing up EyeWitness to help us out as we want to be as efficient as possible to give the client the best possible assessment. This means speeding up any tasks that can be performed `faster` and more efficiently `without the possibility of missing things`.
 
 Questions:
 1. Use the IDOR vulnerability to find a flag. Submit the flag value as your answer (flag format: `HTB{}`). `HTB{8f40e***************************}`
@@ -1064,6 +1078,8 @@ HTB{bdd8a***************************} 📌
 ---
 
 ### Initial Access
+
+> Now that we've thoroughly enumerated and attacked the external perimeter and uncovered a wealth of findings, we're ready to shift gears and focus on obtaining stable internal network access. Per the SoW document, if we can achieve an internal foothold, the client would like us to see how far we can go up to and including gaining `Domain Admin level access`.
 
 Questions:
 1. Submit the contents of the flag.txt file in the `/home/srvadm` directory. `b447c***************************`
