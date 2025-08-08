@@ -1005,7 +1005,7 @@ credentials:
 ```yaml
 credentials:
     username: admin
-    password: 12qwaszx
+    password: '12qwaszx'
     host: monitoring.inlanefreight.local
 ```
 
@@ -1170,7 +1170,7 @@ TTY Report
 ```yaml
 credentials:
     username: srvadm
-    password: ILFreightnixadm!
+    password: 'ILFreightnixadm!'
     host: monitoring.inlanefreight.local
 ```
 
