@@ -34,7 +34,7 @@ This module covers the fundamentals of penetration testing and an introduction t
 
 Nmap is one of the most used networking mapping and discovery tools because of its accurate results and efficiency. The tool is widely used by both offensive and defensive security practitioners. This module covers fundamentals that will be needed to use the Nmap tool for performing effective network enumeration.
 
-### 04 Footprinting
+### 04 [Footprinting](./footprinting_skills_assessment.md)
 
 This module covers techniques for footprinting the most commonly used services in almost all enterprise and business IT infrastructures. Footprinting is an essential phase of any penetration test or security audit to identify and prevent information disclosure. Using this process, we examine the individual services and attempt to obtain as much information from them as possible.
 
@@ -50,7 +50,7 @@ This module introduces the concept of Vulnerability Assessments. We will review 
 
 During an assessment, it is very common for us to transfer files to and from a target system. This module covers file transfer techniques leveraging tools commonly available across all versions of Windows and Linux systems.
 
-### 08 Shells and Payloads
+### 08 [Shells and Payloads](./shells_and_payloads_skills_assessment.md)
 
 Gain the knowledge and skills to identify and use shells and payloads to establish a foothold on vulnerable Windows and Linux systems. This module utilizes a fictitious scenario where the learner will place themselves in the perspective of a sysadmin trying out for a position on CAT5 Security's network penetration testing team.
 
@@ -58,19 +58,19 @@ Gain the knowledge and skills to identify and use shells and payloads to establi
 
 The Metasploit Framework is an open-source set of tools used for network enumeration, attacks, testing security vulnerabilities, evading detection, performing privilege escalation attacks, and performing post-exploitation.
 
-### 10 Password Attacks
+### 10 [Password Attacks](./password_attacks_skills_assessment.md)
 
 Passwords are still the primary method of authentication in corporate networks. If strong password policies are not enforced, users often choose weak, easy-to-remember passwords that can be cracked offline and leveraged to escalate access. As penetration testers, we encounter passwords in many forms during our assessments. It's essential to understand how passwords are stored, how they can be retrieved, methods for cracking weak passwords, techniques for using hashes that cannot be cracked, and how to identify weak or default password usage.
 
-### 11 Attacking Common Services
+### 11 [Attacking Common Services](./attacking_common_services_skills_assessment.md)
 
 Organizations regularly use a standard set of services for different purposes. It is vital to conduct penetration testing activities on each service internally and externally to ensure that they are not introducing security threats. This module will cover how to enumerate each service and test it against known vulnerabilities and exploits with a standard set of tools.
 
-### 12 Pivoting, Tunneling, and Port Forwarding
+### 12 [Pivoting, Tunneling, and Port Forwarding](./pivoting_tunneling_and_port_forwarding_skills_assessment.md)
 
 Once a foothold is gained during an assessment, it may be in scope to move laterally and vertically within a target network. Using one compromised machine to access another is called pivoting and allows us to access networks and resources that are not directly accessible to us through the compromised host. Port forwarding accepts the traffic on a given IP address and port and redirects it to a different IP address and port combination. Tunneling is a technique that allows us to encapsulate traffic within another protocol so that it looks like a benign traffic stream.
 
-### 13 Active Directory Enumeration and Attacks
+### 13 [Active Directory Enumeration and Attacks](./active_directory_enumeration_and_attacks_skills_assessment.md)
 
 Active Directory (AD) is the leading enterprise domain management suite, providing identity and access management, centralized domain administration, authentication, and much more. Due to the many features and complexity of AD, it presents a large attack surface that is difficult to secure properly. To be successful as infosec professionals, we must understand AD architectures and how to secure our enterprise environments. As Penetration testers, having a firm grasp of what tools, techniques, and procedures are available to us for enumerating and attacking AD environments and commonly seen AD misconfigurations is a must.
 
@@ -114,15 +114,15 @@ Command injection vulnerabilities can be leveraged to compromise a hosting serve
 
 This module covers three common web vulnerabilities, HTTP Verb Tampering, IDOR, and XXE, each of which can have a significant impact on a company's systems. We will cover how to identify, exploit, and prevent each of them through various methods.
 
-### 24 Attacking Common Applications
+### 24 [Attacking Common Applications](./attacking_common_applications_skills_assessment.md)
 
 Penetration Testers can come across various applications, such as Content Management Systems, custom web applications, internal portals used by developers and sysadmins, and more. It's common to find the same applications across many different environments. While an application may not be vulnerable in one environment, it may be misconfigured or unpatched in the next. It is important as an assessor to have a firm grasp of enumerating and attacking the common applications discussed in this module. This knowledge will help when encountering other types of applications during assessments.
 
-### 25 Linux Privilege Escalation
+### 25 [Linux Privilege Escalation](./linux_privilege_escalation_skills_assessment.md)
 
 Privilege escalation is a crucial phase during any security assessment. During this phase, we attempt to gain access to additional users, hosts, and resources to move closer to the assessment's overall goal. There are many ways to escalate privileges. This module aims to cover the most common methods emphasizing real-world misconfigurations and flaws that we may encounter in a client environment. The techniques covered in this module are not an exhaustive list of all possibilities and aim to avoid extreme "edge-case" tactics that may be seen in a Capture the Flag (CTF) exercise.
 
-### 26 Windows Privilege Escalation
+### 26 [Windows Privilege Escalation](./windows_privilege_escalation_skills_assessment.md)
 
 After gaining a foothold, elevating our privileges will provide more options for persistence and may reveal information stored locally that can further our access in the environment. Enumeration is the key to privilege escalation. When you gain initial shell access to the host, it is important to gain situational awareness and uncover details relating to the OS version, patch level, any installed software, our current privileges, group memberships, and more. Windows presents an enormous attack surface and, being that most companies run Windows hosts in some way, we will more often than not find ourselves gaining access to Windows machines during our assessments. This covers common methods while emphasizing real-world misconfigurations and flaws that we may encounter during an assessment. There are many additional "edge-case" possibilities not covered in this module. We will cover both modern and legacy Windows Server and Desktop versions that may be present in a client environment.
 
