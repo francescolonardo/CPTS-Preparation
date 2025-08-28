@@ -16,7 +16,7 @@ Questions:
 7. What attack can this user perform? `DCSync`
 8. Take over the domain and submit the contents of the `flag.txt` file on the `Administrator` Desktop on `DC01`. `r3pli**************`
 
-#### ???
+#### External Information Gathering
 
 ```
 ┌──(nabla㉿kali)-[~]
@@ -49,8 +49,8 @@ PORT      STATE SERVICE
 
 #### Initial Access - Antak Web Shell
 
-![Firefox - Antak Webshell 1](./assets/active_directory_enumeration_and_attacks_skills_assessment_01.png)
-![Firefox - Antak Webshell 2](./assets/active_directory_enumeration_and_attacks_skills_assessment_02.png)
+![Firefox - Antak Webshell 1](./assets/screenshots/active_directory_enumeration_and_attacks_skills_assessment_01.png)
+![Firefox - Antak Webshell 2](./assets/screenshots/active_directory_enumeration_and_attacks_skills_assessment_02.png)
 
 ```
 PS> whoami
@@ -224,7 +224,7 @@ PORT     STATE SERVICE
 5985/tcp open  wsman
 ```
 
-### Active Directory Kerberoasting Attack
+#### Active Directory Kerberoasting Attack
 
 ```
 PS C:\Windows\system32> setspn -Q */*
