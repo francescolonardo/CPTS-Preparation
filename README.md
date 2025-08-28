@@ -6,9 +6,19 @@
 
 ## Introduction
 
-This repository is dedicated to documenting my preparation for the **HTB Certified Penetration Testing Specialist (CPTS)** exam. It includes structured notes, methodology references, and practical walkthroughs focused on...
+This repository is dedicated to documenting my preparation for the HTB Certified Penetration Testing Specialist (CPTS) exam. It includes structured notes, methodology references, and practical walkthroughs aligned with the CPTS curriculum, combining both network and web application penetration testing topics.
 
-[...]
+The content is organized to cover the entire penetration testing lifecycle, from information gathering to exploitation, privilege escalation, and reporting. Core areas include:
+
+= **Penetration Testing Methodology** – pre-engagement, scoping, rules of engagement, and reporting.
+- **Network Security** – enumeration, service attacks, password attacks, pivoting, tunneling, and privilege escalation on Linux/Windows.
+- **Active Directory Security** – enumeration, attacks, and common misconfigurations.
+- **Web Application Security** – reconnaissance, fuzzing, SQL injection, XSS, file upload attacks, command injection, and other common web vulnerabilities.
+- **Practical Skills Development** – hands-on exploitation, payload delivery, shells, file transfers, and the use of tools like Nmap, Hydra, SQLMap, Burp Suite, ZAP, Metasploit, and ffuf.
+
+Each section contains technical notes, tool usage, and real-world inspired examples to build not just exam readiness but also a practical penetration testing mindset applicable in professional engagements.
+
+Whether you are preparing for the CPTS certification or looking to strengthen your skills in network and web penetration testing, this repository serves as a study guide and technical reference for offensive security practitioners.
 
 ## Learning Path Topics
 
