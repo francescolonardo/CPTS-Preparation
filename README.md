@@ -10,7 +10,7 @@ This repository is dedicated to documenting my preparation for the HTB Certified
 
 The content is organized to cover the entire penetration testing lifecycle, from information gathering to exploitation, privilege escalation, and reporting. Core areas include:
 
-= **Penetration Testing Methodology** – pre-engagement, scoping, rules of engagement, and reporting.
+- **Penetration Testing Methodology** – pre-engagement, scoping, rules of engagement, and reporting.
 - **Network Security** – enumeration, service attacks, password attacks, pivoting, tunneling, and privilege escalation on Linux/Windows.
 - **Active Directory Security** – enumeration, attacks, and common misconfigurations.
 - **Web Application Security** – reconnaissance, fuzzing, SQL injection, XSS, file upload attacks, command injection, and other common web vulnerabilities.
