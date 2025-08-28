@@ -132,11 +132,11 @@ Proper documentation is paramount during any engagement. The end goal of a techn
 
 ### 28 Attacking Enterprise Networks
 
-We often encounter large and complex networks during our assessments. We must be comfortable approaching an internal or external network, regardless of the size, and be able to work through each phase of the penetration testing process to reach our goal. This module will guide students through a simulated penetration testing engagement, from start to finish, with an emphasis on hands-on testing steps that are directly applicable to real-world engagements.
-
 #### 28.1 [Attacking Enterprise Networks - Internal Testing](./attacking_enterprise_networks_internal_testing.md)
 #### 28.2 [Attacking Enterprise Networks - External Testing](./attacking_enterprise_networks_external_testing.md)
 #### 28.3 [Attacking Enterprise Networks - Lateral Movement and Privilege Escalation](./attacking_enterprise_networks_lateral_movement_and_privilege_escalation.md)
+
+We often encounter large and complex networks during our assessments. We must be comfortable approaching an internal or external network, regardless of the size, and be able to work through each phase of the penetration testing process to reach our goal. This module will guide students through a simulated penetration testing engagement, from start to finish, with an emphasis on hands-on testing steps that are directly applicable to real-world engagements.
 
 ---
 ---
