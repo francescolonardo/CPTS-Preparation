@@ -38,7 +38,7 @@ Nmap is one of the most used networking mapping and discovery tools because of i
 
 This module covers techniques for footprinting the most commonly used services in almost all enterprise and business IT infrastructures. Footprinting is an essential phase of any penetration test or security audit to identify and prevent information disclosure. Using this process, we examine the individual services and attempt to obtain as much information from them as possible.
 
-### 05 Information Gathering - Web Edition
+### 05 [Information Gathering - Web Edition](https://github.com/francescolonardo/CBBH-Preparation/blob/main/04_information_gathering_web_edition.md)
 
 This module equips learners with essential web reconnaissance skills, crucial for ethical hacking and penetration testing. It explores both active and passive techniques, including DNS enumeration, web crawling, analysis of web archives and HTTP headers, and fingerprinting web technologies.
 
