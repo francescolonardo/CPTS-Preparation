@@ -74,43 +74,43 @@ Once a foothold is gained during an assessment, it may be in scope to move later
 
 Active Directory (AD) is the leading enterprise domain management suite, providing identity and access management, centralized domain administration, authentication, and much more. Due to the many features and complexity of AD, it presents a large attack surface that is difficult to secure properly. To be successful as infosec professionals, we must understand AD architectures and how to secure our enterprise environments. As Penetration testers, having a firm grasp of what tools, techniques, and procedures are available to us for enumerating and attacking AD environments and commonly seen AD misconfigurations is a must.
 
-### 14 Using Web Proxies
+### 14 [Using Web Proxies](https://github.com/francescolonardo/CBBH-Preparation/blob/main/03_using_web_proxies.md)
 
 Web application penetration testing frameworks are an essential part of any web penetration test. This module will teach you two of the best frameworks: Burp Suite and OWASP ZAP.
 
-### 15 Attacking Web Applications with Ffuf
+### 15 [Attacking Web Applications with Ffuf](https://github.com/francescolonardo/CBBH-Preparation/blob/main/05_attacking_web_applications_with_ffuf.md)
 
 This module covers the fundamental enumeration skills of web fuzzing and directory brute forcing using the Ffuf tool. The techniques learned in this module will help us in locating hidden pages, directories, and parameters when targeting web applications.
 
-### 16 Login Brute Forcing
+### 16 [Login Brute Forcing](https://github.com/francescolonardo/CBBH-Preparation/blob/main/13_login_brute_forcing.md)
 
 The module contains an exploration of brute-forcing techniques, including the use of tools like Hydra and Medusa, and the importance of strong password practices. It covers various attack scenarios, such as targeting SSH, FTP, and web login forms.
 
-### 17 SQL Injection Fundamentals
+### 17 [SQL Injection Fundamentals](https://github.com/francescolonardo/CBBH-Preparation/blob/main/08_sql_injection_fundamentals.md)
 
 Databases are an important part of web application infrastructure and SQL (Structured Query Language) to store, retrieve, and manipulate information stored in them. SQL injection is a code injection technique used to take advantage of coding vulnerabilities and inject SQL queries via an application to bypass authentication, retrieve data from the back-end database, or achieve code execution on the underlying server.
 
-### 18 SQLMap Essentials
+### 18 [SQLMap Essentials](https://github.com/francescolonardo/CBBH-Preparation/blob/main/09_sqlmap_essentials.md)
 
 The SQLMap Essentials module will teach you the basics of using SQLMap to discover various types of SQL Injection vulnerabilities, all the way to the advanced enumeration of databases to retrieve all data of interest.
 
-### 19 Cross-Site Scripting (XSS)
+### 19 [Cross-Site Scripting (XSS)](https://github.com/francescolonardo/CBBH-Preparation/blob/main/07_cross_site_scripting.md)
 
 Cross-Site Scripting (XSS) vulnerabilities are among the most common web application vulnerabilities. An XSS vulnerability may allow an attacker to execute arbitrary JavaScript code within the target's browser and result in complete web application compromise if chained together with other vulnerabilities. This module will teach you how to identify XSS vulnerabilities and exploit them.
 
-### 20 File Inclusion
+### 20 [File Inclusion](https://github.com/francescolonardo/CBBH-Preparation/blob/main/16_file_inclusion.md)
 
 File Inclusion is a common web application vulnerability, which can be easily overlooked as part of a web application's functionality.
 
-### 21 File Upload Attacks
+### 21 [File Upload Attacks](https://github.com/francescolonardo/CBBH-Preparation/blob/main/11_file_upload_attacks.md)
 
 Arbitrary file uploads are among the most critical web vulnerabilities. These flaws enable attackers to upload malicious files, execute arbitrary commands on the back-end server, and even take control over the entire server and all web applications hosted on it and potentially gain access to sensitive data or cause a service disruption.
 
-### 22 Command Injections
+### 22 [Command Injections](https://github.com/francescolonardo/CBBH-Preparation/blob/main/10_command_injections.md)
 
 Command injection vulnerabilities can be leveraged to compromise a hosting server and its entire network. This module will teach you how to identify and exploit command injection vulnerabilities and how to use various filter bypassing techniques to avoid security mitigations.
 
-### 23 Web Attacks
+### 23 [Web Attacks](https://github.com/francescolonardo/CBBH-Preparation/blob/main/15_web_attacks.md)
 
 This module covers three common web vulnerabilities, HTTP Verb Tampering, IDOR, and XXE, each of which can have a significant impact on a company's systems. We will cover how to identify, exploit, and prevent each of them through various methods.
 
